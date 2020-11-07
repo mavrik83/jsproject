@@ -34,3 +34,18 @@ class Recipes {
     }.bind(this))
   }
 
+  createArrayOfRecipeIngredients(ingredients) {
+    let ingredientArray = [];
+    for (let ingredient of ingredients) {
+      ingredientArray.push(ingredient.name);
+    }
+    return ingredientArray
+  }
+
+  createRecipes(recipes) {
+    for (let recipe of recipes) {
+      let ingredients = this.createArrayOfRecipeIngredients(recipe.attributes.ingredients)
+      this.recipes.push(new Recipe(recipe.attributes.title, recipe.attributes.image_link, recipe.attributes.recipe_link, ingredients))
+    }
+  }
+
