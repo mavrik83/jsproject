@@ -49,3 +49,9 @@ class Recipes {
     }
   }
 
+  addRecipesToDom() {
+    for (let recipe of this.recipes) {
+      recipe.createRecipeCard()
+    }
+  }
+
