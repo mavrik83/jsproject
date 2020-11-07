@@ -55,3 +55,27 @@ class Recipes {
     }
   }
 
+  addRecipe() {
+    const form = event.target.parentElement
+    const ingredients = form[3].value.split(', ')
+    const recipe = new Recipe(form[0].value, form[1].value, form[2].value, ingredients)
+    const configurationObject = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        "title": form[0].value,
+        "image_link": form[1].value,
+        "recipe_link": form[2].value,
+        "ingredients": ingredients
+      })
+    };
+    this.adapter.postRecipeToApi(configurationObject).then(function(json) {
+      recipe.createRecipeCard();
+      this.toggleButtons();
+      this.toggleForm();
+    }.bind(this))
+  }
+
