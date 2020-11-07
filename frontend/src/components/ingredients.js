@@ -5,3 +5,7 @@ class Ingredients {
     this.fetchAndPopulateDropDown();
   }
 
+  fetchAndPopulateDropDown() {
+    this.adapter.getIngredients().then(json => this.populateIngredientDropDown(json))
+  }
+
