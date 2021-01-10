@@ -118,6 +118,15 @@ input[type=submit] {
   text-align: center;
 }
 
+.link-del {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+
 .card-footer a {
   color: #b83d14;
   font-family: helvetica;

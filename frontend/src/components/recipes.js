@@ -45,7 +45,7 @@ class Recipes {
   createRecipes(recipes) {
     for (let recipe of recipes) {
       let ingredients = this.createArrayOfRecipeIngredients(recipe.attributes.ingredients)
-      this.recipes.push(new Recipe(recipe.attributes.title, recipe.attributes.image_link, recipe.attributes.recipe_link, ingredients))
+      this.recipes.push(new Recipe(recipe.attributes.title, recipe.attributes.image_link, recipe.attributes.recipe_link, ingredients, recipe.id))
     }
   }
 

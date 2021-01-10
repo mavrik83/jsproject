@@ -22,12 +22,11 @@ class RecipesController < ApplicationController
   def delete
     recipe = Recipe.find_by(params[:id])
     recipe.destroy
-    show
   end
 
   private
 
   def recipe_params
-    params.require(:recipe).permit(:title, :recipe_link, :image_link)
+    params.require(:recipe).permit(:title, :recipe_link, :image_link, :id)
   end
 end
