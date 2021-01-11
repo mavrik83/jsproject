@@ -13,4 +13,4 @@
 ## Installation
 
 > 1. From the ```recipe-api``` directory, run ```rails db:migrate``` and then start the server via ```rails s```.
-2. From the ```frontend``` directory, run ```open index.html``` at the command prompt.
+> 2. From the ```frontend``` directory, run ```open index.html``` at the command prompt.
